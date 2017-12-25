@@ -23,15 +23,17 @@
 
   <body>
     <!-- Button to open the modal login form -->
-    <button onclick="document.getElementById('login').style.display='block'">Login</button>
+      <button onclick="document.getElementById('login').style.display='block'">Login</button>
+
 
     <!-- The Modal -->
     <div id="login" class="modal">
-      <span onclick="document.getElementById('login').style.display='none'"
-      class="close" title="Close Modal">&times;</span>
 
       <!-- Modal Content -->
       <form class="modal-content animate" action="/action_page.php">
+        <span onclick="document.getElementById('login').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
         <div class="imgcontainer">
           <img src="img/user.png" alt="USER" class="avatar"></img>
         </div>
