@@ -43,6 +43,13 @@ button:hover {
 img.avatar {
     width: 20%;
     border-radius: 50%;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    &:hover{
+      transition-duration: 2s;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
 }
 
 .container {
