@@ -1,4 +1,6 @@
 /* Full-width input fields */
+$button_color: #F5F4F4;
+
 html,body{
   background-color: #F3F5F6;
 }
@@ -13,7 +15,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.button_default {
     background-color: #43CEF8;
     color: white;
     padding: 14px 20px;
@@ -22,7 +24,22 @@ button {
     width: 100%;
 }
 
-button:hover {
+.button_default:hover {
+    opacity: 0.8;
+}
+
+/*set style for the button add*/
+.button_add {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: $button_color;
+    border: none;
+    box-shadow: 0px 0px 5px 5px $button_color;
+    cursor: pointer;
+}
+
+.button_add:hover {
     opacity: 0.8;
 }
 
@@ -41,7 +58,8 @@ button:hover {
 }
 
 img.avatar {
-    width: 20%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
     filter: grayscale(0%);
@@ -49,6 +67,22 @@ img.avatar {
       transition-duration: 2s;
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
+    }
+}
+
+img.S_avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    filter: opacity(20%);
+    cursor: pointer;
+    &:hover{
+      transition-duration: 2s;
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+      filter: opacity(100%);
     }
 }
 

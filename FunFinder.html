@@ -6,40 +6,49 @@
 
     <title>FunFinder</title>
     <meta charset="utf-8">
-    <!---no borrar, son LINKS de animate y fontawesome--->
-    <link rel="stylesheet" href="../animate/animate.css">
-    <link rel="stylesheet" href="../font-awesome/font-awesome.css">
+
     <!-- Bootstrap CSS (not the one installed(on INTERNET))-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Optional JavaScript (BOOTSTRAP) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
     <!--links con los css y js-->
     <link href="FunFinder.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="FunFinder.js"></script>
+
+    <!---no borrar, son LINKS de animate y fontawesome--->
+    <script defer src="../fontawesome/fontawesome-all.js"></script>
+    <link rel="stylesheet" href="../animate/animate.css">
+    <link rel="stylesheet" href="../fontawesome/fontawesome.css">
 
   </head>
 
   <body>
     <!-- Button to open the modal login form -->
-      <button onclick="document.getElementById('login').style.display='block'">Login</button>
-
+      <button class="button_default" onclick="document.getElementById('login').style.display='block'">Login</button>
+      <button class="button_default" onclick="document.getElementById('createaccount').style.display='block'" style="background-color:#325BFF">create account</button>
       <div align="center">
         <img src="img/logo/fflogo2.png" alt="logo"></img>
       </div>
+
+      <div class="list-group">
+      <a class="list-group-item" href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Home</a>
+      <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Library</a>
+      <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Applications</a>
+      <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a>
+    </div>
 
 
     <!-- The Modal -->
     <div id="login" class="modal">
 
-      <!-- Modal Content -->
+      <!-- Modal Content login -->
       <form class="modal-content animate" action="/action_page.php">
         <span onclick="document.getElementById('login').style.display='none'"
         class="close" title="Close Modal">&times;</span>
 
         <div class="imgcontainer">
-          <img src="img/login/user.png" alt="USER" class="avatar wow flipInX" data-wow-delay="0.6s"></img>
+          <img src="img/avatars/avatar1.png" alt="USER" class="avatar wow flipInX" data-wow-delay="0.6s"></img>
         </div>
 
         <hr width="25%"></hr>
@@ -51,13 +60,90 @@
           <label><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <button type="submit">Login</button>
+          <button type="submit" class="button_default">Login</button>
           <input type="checkbox" checked="checked"> Remember me
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="button_default cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="https://www.youtube.com/watch?v=Wo0o2GiT55w">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal Content create account -->
+    <div id="createaccount" class="modal">
+      <form class="modal-content animate" action="/action_page.php">
+        <span onclick="document.getElementById('createaccount').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+        <div align="center">
+          <img src="img/logo/fflogo2.png" alt="logo"></img>
+        </div>
+
+
+        <div class="container">
+          <label><b>email</b></label>
+          <input type="password" placeholder="Enter Email" name="email" required>
+
+          <div class="container">
+          </div>
+
+        <div>
+          <button class="button_default" onclick="document.getElementById('continue').style.display='block'" style="width:20%;">continue</button>
+        </div>
+
+        <div class="container">
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('createaccount').style.display='none'" class="button_default cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal Content continue creating account -->
+    <div id="continue" class="modal">
+      <form class="modal-content animate" action="/action_page.php">
+        <span onclick="document.getElementById('continue').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+        <div class="imgcontainer">
+          <img src="img/avatars/avatar1.png" alt="USER" class="avatar wow flipInX" data-wow-delay="0.6s"></img>
+        </div>
+
+        <div class="imgcontainer">
+          <img src="img/avatars/avatar2.png" alt="USER" class="S_avatar wow flipInX" data-wow-delay="0.7s"></img>
+          <img src="img/avatars/avatar3.png" alt="USER" class="S_avatar wow flipInX" data-wow-delay="0.8s"></img>
+          <img src="img/avatars/avatar4.png" alt="USER" class="S_avatar wow flipInX" data-wow-delay="0.9s"></img>
+          <img src="img/avatars/avatar5.png" alt="USER" class="S_avatar wow flipInX" data-wow-delay="1s"></img>
+          <button type="button" class="button_add wow flipInX" data-wow-delay="1s"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+
+        <hr width="25%"></hr>
+
+        <div class="container">
+          <label><b>Email</b></label>
+          <input type="email" placeholder="Enter email" name="email" required>
+
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="password" placeholder="Repeat Password" name="psw" required>
+
+
+
+          <div class="container">
+          </div>
+
+        <div>
+          <button type="submit" class="button_default">submit</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('createaccount').style.display='none'" class="button_default cancelbtn">Cancel</button>
         </div>
       </form>
     </div>
