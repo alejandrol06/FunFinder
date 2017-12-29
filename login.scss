@@ -43,6 +43,20 @@ input[type=text], input[type=password] {
     opacity: 0.8;
 }
 
+.button_add:focus {
+    outline:0;
+    background-color: rgba(226,45,39,1);
+  }
+
+h2 {
+  margin-top: 10px;
+  font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+  color: rgba(46, 231, 255,0.9);
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(46, 48, 255,0.9);
+}
+
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
